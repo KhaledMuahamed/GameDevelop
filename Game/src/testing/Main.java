@@ -1,7 +1,7 @@
 package testing;
 
-import controller.ChapterManager;
-import controller.ResourcesManager;
+import controller.helpingControllers.ChapterManager;
+import controller.helpingControllers.ResourcesManager;
 import model.question.QuestionIF;
 
 public class Main {

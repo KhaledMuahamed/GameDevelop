@@ -1,7 +1,7 @@
 package controller.mainController;
 
-import controller.ChapterManager;
-import controller.ResourcesManager;
+import controller.helpingControllers.ChapterManager;
+import controller.helpingControllers.ResourcesManager;
 import model.enums.QuestionTypes;
 import model.question.QuestionIF;
 
@@ -59,6 +59,11 @@ public class mainControllerImp implements  mainControllerIF {
     @Override
     public int getChapterSize() {
         return currentChapterManager.getChapterSize();
+    }
+
+    @Override
+    public boolean verifyAnswer(char[] userAnswer) {
+        return currentChapterManager.verifyAnswer(currentPuzzle,userAnswer);
     }
 
     @Override

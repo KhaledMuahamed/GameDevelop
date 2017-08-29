@@ -1,4 +1,4 @@
-package controller;
+package controller.helpingControllers;
 
 import model.Chapter;
 import model.question.QuestionIF;
@@ -14,7 +14,7 @@ public class ChapterManager {
 		return this.chapter.getQuestion(number);
 	}
 
-	public boolean verifyAnswer(int number, Character[] userAnswer) {
+	public boolean verifyAnswer(int number, char[] userAnswer) {
 		String realAnswer = this.chapter.getAnswer(number).toString();
 		String triedAnswer = userAnswer.toString();
 		return realAnswer.equals(triedAnswer);
