@@ -1,35 +1,23 @@
 package controller;
 
 import model.Chapter;
+import model.question.QuestionIF;
 
 public class ChapterManager {
-    private Chapter chapter;
-    private Character[] colllectedWord;
-    ChapterManager(Chapter chapter){
-        this.chapter = chapter;
-        colllectedWord = new Character[chapter.getKeyWord().length];
-    }
+	private Chapter chapter;
 
-    public Question getQuestion(int number){
-        return null;
-    }
+	ChapterManager(Chapter chapter) {
+		this.chapter = chapter;
+	}
 
-    public Question[] getQuestions(){
-        return null;
-    }
-    public Character[] getAnswer(int number){
-        return null;
-    }
-    public Character[][] getAnswers(){
-        return null;
-    }
-    public Character[] getKeyWord(){
-        return null;
-    }
-    public void addKeyCharacter(int number,Character key){
-        colllectedWord[number] = key;
-    }
+	public QuestionIF getQuestion(int number) {
+		return this.chapter.getQuestion(number);
+	}
 
-
+	public boolean verifyAnswer(int number, Character[] userAnswer) {
+		String realAnswer = this.chapter.getAnswer(number).toString();
+		String triedAnswer = userAnswer.toString();
+		return realAnswer.equals(triedAnswer);
+	}
 
 }
