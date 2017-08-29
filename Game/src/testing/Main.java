@@ -11,9 +11,9 @@ public class Main {
 		ResourcesManager resManager = ResourcesManager.getInstance();
 		// load chapter1
 		ChapterManager chManager = resManager.loadChapter(1);
-		
+
 		QuestionIF q = chManager.getQuestion(0);
-		
+
 		System.out.println(q.getQuestion());
 
 	}

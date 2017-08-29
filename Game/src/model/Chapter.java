@@ -17,4 +17,6 @@ public class Chapter {
 	public QuestionIF getQuestion(int number) {
 		return this.questions[number];
 	}
+
+	public int getQuestionsSize(){ return this.questions.length; }
 }

@@ -19,5 +19,8 @@ public class ChapterManager {
 		String triedAnswer = userAnswer.toString();
 		return realAnswer.equals(triedAnswer);
 	}
+	public int getChapterSize(){
+		return this.chapter.getQuestionsSize();
+	}
 
 }
